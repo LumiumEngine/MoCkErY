@@ -8,10 +8,13 @@ int main()
 	clip::get_text(value);
 	for (int i = 0; i < value.size(); i++)
 	{
-		if (i % 2 == 0)
-			value[i] = tolower(value[i]);
-		else
-			value[i] = toupper(value[i]);
+		if(isalnum(value[i]))
+		{
+			if (i % 2 == 0)
+				value[i] = tolower(value[i]);
+			else
+				value[i] = toupper(value[i]);
+		}
 	}
 	clip::set_text(value);
 	return 1;
